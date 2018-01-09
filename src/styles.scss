@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+.row {
+  border: 1px solid gray;
+}
+
 #wrapper {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -64,6 +68,7 @@ body {
   text-decoration: none;
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
+  margin: 5px 0;
 }
 
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
