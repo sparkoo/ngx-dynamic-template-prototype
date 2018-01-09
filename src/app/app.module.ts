@@ -8,7 +8,6 @@ import { FooterComponent } from './dynamic-components/footer/footer.component';
 import { HeaderComponent } from './dynamic-components/header/header.component';
 import { MenuComponent } from './dynamic-components/menu/menu.component';
 import { TextComponent } from './dynamic-components/text/text.component';
-import { NgxDynamicTemplateModule } from 'ngx-dynamic-template';
 import { DynamicHolderComponent } from './dynamic/dynamic-holder/dynamic-holder.component';
 
 @NgModule({
@@ -22,8 +21,7 @@ import { DynamicHolderComponent } from './dynamic/dynamic-holder/dynamic-holder.
     DynamicHolderComponent
   ],
   imports: [
-    BrowserModule,
-    NgxDynamicTemplateModule.forRoot()
+    BrowserModule
   ],
   bootstrap: [AppComponent],
   entryComponents: [
