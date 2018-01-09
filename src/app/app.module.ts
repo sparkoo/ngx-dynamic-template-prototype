@@ -10,6 +10,7 @@ import { MenuComponent } from './dynamic-components/menu/menu.component';
 import { TextComponent } from './dynamic-components/text/text.component';
 import { DynamicHolderComponent } from './dynamic/dynamic-holder/dynamic-holder.component';
 import { PageService } from './page.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PageService } from './page.service';
   ],
   imports: [
     BrowserModule,
-    DragulaModule
+    DragulaModule,
+    NgbModule.forRoot()
   ],
   bootstrap: [AppComponent],
   entryComponents: [

@@ -3,6 +3,22 @@
     <ul [dragula]='"bag-one"' [dragulaModel]='components'>
       <li *ngFor="let component of components" class="draggable">{{component.name}}</li>
     </ul>
-    <button class="btn btn-primary">add component</button>
+    <div ngbDropdown class="dropdown">
+      <button ngbDropdownToggle class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        add component
+      </button>
+      <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <button class="dropdown-item" type="button" (click)="addHeaderComponent()">Header</button>
+        <button class="dropdown-item" type="button" (click)="addTextComponent()">Text</button>
+        <button class="dropdown-item" type="button" (click)="addMenuComponent()">Menu</button>
+        <button class="dropdown-item" type="button" (click)="addFooterComponent()">Footer</button>
+      </div>
+    </div>
+    <p class="mt-5 help">
+      Items in sidebar can be reordered by drag-and-drop. It's propagated in runtime.
+      <br>
+      By swiping item outside of list, it's removed from page
+    </p>
   </div>
 </div>
