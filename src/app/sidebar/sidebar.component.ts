@@ -27,16 +27,16 @@ export class SidebarComponent implements OnInit {
   }
 
   addHeaderComponent() {
-    this.pageService.components.push(HeaderComponent);
+    this.pageService.components.push(<DynamicComponent>HeaderComponent);
   }
 
   addTextComponent() {
-    this.pageService.components.push(TextComponent);
+    this.pageService.components.push(<DynamicComponent>TextComponent);
   }
   addMenuComponent() {
-    this.pageService.components.push(MenuComponent);
+    this.pageService.components.push(<DynamicComponent>MenuComponent);
   }
   addFooterComponent() {
-    this.pageService.components.push(FooterComponent);
+    this.pageService.components.push(<DynamicComponent>FooterComponent);
   }
 }

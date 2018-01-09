@@ -8,11 +8,11 @@ import { DynamicComponent } from './dynamic/dynamic-component';
 @Injectable()
 export class PageService {
 
-  public components: Array<any> = [
-    HeaderComponent, 
-    MenuComponent, 
-    TextComponent, 
-    FooterComponent];
+  public components: Array<DynamicComponent> = [
+    <DynamicComponent>HeaderComponent, 
+    <DynamicComponent>MenuComponent, 
+    <DynamicComponent>TextComponent, 
+    <DynamicComponent>FooterComponent];
 
   constructor() { }
 

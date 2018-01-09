@@ -6,10 +6,12 @@ import { DynamicComponent } from '../../dynamic/dynamic-component';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent implements OnInit, DynamicComponent {
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  dynamicComponentName() { return 'Footer'; }
 }

@@ -1,3 +1,3 @@
 export interface DynamicComponent {
-    name: string;
+    dynamicComponentName(): string;
 }
