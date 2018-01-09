@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DynamicComponent } from '../../dynamic/dynamic-component';
 
 @Component({
   selector: 'app-footer',
@@ -11,5 +12,4 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

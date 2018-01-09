@@ -3,7 +3,7 @@ import { HeaderComponent } from '../../dynamic-components/header/header.componen
 import { MenuComponent } from '../../dynamic-components/menu/menu.component';
 import { TextComponent } from '../../dynamic-components/text/text.component';
 import { FooterComponent } from '../../dynamic-components/footer/footer.component';
-import { timeout } from 'q';
+import { PageService } from '../../page.service';
 
 @Component({
   selector: 'app-dynamic-holder',
@@ -12,14 +12,9 @@ import { timeout } from 'q';
 })
 export class DynamicHolderComponent implements OnInit {
 
-  components = [
-    HeaderComponent,
-    MenuComponent,
-    TextComponent,
-    FooterComponent
-  ];
+  components = this.pageService.components;
 
-  constructor() { }
+  constructor(private pageService: PageService) { }
 
   ngOnInit() {
   }

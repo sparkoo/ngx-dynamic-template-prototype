@@ -1,0 +1,11 @@
+.draggable {
+    cursor: move;
+}
+
+.draggable:hover {
+    border: 1px dashed darkgray;
+}
+
+.gu-transit {
+    opacity: 0.6;
+}

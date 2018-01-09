@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PageService } from '../page.service';
+import { DynamicComponent } from '../dynamic/dynamic-component';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  components: Array<any> = this.pageService.components;
+
+  constructor(private pageService: PageService) { }
 
   ngOnInit() {
   }
