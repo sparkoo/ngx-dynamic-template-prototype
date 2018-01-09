@@ -4,27 +4,33 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { MainComponent } from './main/main.component';
-import { HeaderComponent } from './dynamic/header/header.component';
-import { MenuComponent } from './dynamic/menu/menu.component';
-import { TextComponent } from './dynamic/text/text.component';
-import { FooterComponent } from './dynamic/footer/footer.component';
-
+import { FooterComponent } from './dynamic-components/footer/footer.component';
+import { HeaderComponent } from './dynamic-components/header/header.component';
+import { MenuComponent } from './dynamic-components/menu/menu.component';
+import { TextComponent } from './dynamic-components/text/text.component';
+import { NgxDynamicTemplateModule } from 'ngx-dynamic-template';
+import { DynamicHolderComponent } from './dynamic/dynamic-holder/dynamic-holder.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     SidebarComponent,
-    MainComponent,
+    AppComponent,
+    FooterComponent,
+    HeaderComponent,
+    MenuComponent,
+    TextComponent,
+    DynamicHolderComponent
+  ],
+  imports: [
+    BrowserModule,
+    NgxDynamicTemplateModule.forRoot()
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [
     HeaderComponent,
     MenuComponent,
     TextComponent,
     FooterComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  ]
 })
-export class AppModule { }
+export class AppModule {}
