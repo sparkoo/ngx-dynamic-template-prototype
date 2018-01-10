@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { DynamicComponent } from '../../dynamic/dynamic-component';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit, DynamicComponent {
+export class HeaderComponent implements OnInit {
+  static dynamicComponentName = 'Header';
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  dynamicComponentName() { return 'Header'; }
 }

@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { DynamicComponent } from '../../dynamic/dynamic-component';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit, DynamicComponent {
+export class FooterComponent implements OnInit {
+  static dynamicComponentName = 'Footer';
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  dynamicComponentName() { return 'Footer'; }
 }

@@ -3,17 +3,20 @@ import { HeaderComponent } from './dynamic-components/header/header.component';
 import { MenuComponent } from './dynamic-components/menu/menu.component';
 import { TextComponent } from './dynamic-components/text/text.component';
 import { FooterComponent } from './dynamic-components/footer/footer.component';
-import { DynamicComponent } from './dynamic/dynamic-component';
 
 @Injectable()
 export class PageService {
 
-  public components: Array<DynamicComponent> = [
-    <DynamicComponent>HeaderComponent, 
-    <DynamicComponent>MenuComponent, 
-    <DynamicComponent>TextComponent, 
-    <DynamicComponent>FooterComponent];
+  public components: Array<DynamicComponentType> = [
+    HeaderComponent,
+    MenuComponent,
+    TextComponent,
+    FooterComponent];
 
   constructor() { }
 
+}
+
+export interface DynamicComponentType {
+  dynamicComponentName: string;
 }
